@@ -14,6 +14,11 @@ RUN wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tar.xz
 RUN xz -d Python-3.6.6.tar.xz && tar xvf Python-3.6.6.tar && cd Python-3.6.6 && ./configure && make && make install
 
 # 3. 安装websdk
+RUN pip3 install pysocks
+ENV http_proxy=socks5://192.168.1.6:1080
+ENV https_proxy=$http_proxy
+ENV no_proxy="localhost,192.168.0.0/16,10.0.0.0/8,127.0.0.1"
+
 RUN pip3 install --upgrade pip
 RUN pip3 install -U git+https://github.com/ss1917/ops_sdk.git
 # 4. 复制代码

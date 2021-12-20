@@ -12,29 +12,29 @@ ROOT_DIR = os.path.dirname(__file__)
 debug = True
 xsrf_cookies = False
 expire_seconds = 365 * 24 * 60 * 60
-cookie_secret = '61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2X6TP1o/Vo='
+cookie_secret = 'nJ2oZis0V/xlArY2rzpIE6ioC9/KlqR2fd59sD=UXZJ=3OeROB'
 
 #这是写库，
-DEFAULT_DB_DBHOST = os.getenv('DEFAULT_DB_DBHOST', '172.16.0.223') #修改
-DEFAULT_DB_DBPORT = os.getenv('DEFAULT_DB_DBPORT', '3306')   #修改
-DEFAULT_DB_DBUSER = os.getenv('DEFAULT_DB_DBUSER', 'root')   #修改
-DEFAULT_DB_DBPWD = os.getenv('DEFAULT_DB_DBPWD', 'password') #修改
-DEFAULT_DB_DBNAME = os.getenv('DEFAULT_DB_DBNAME', 'codo_cmdb') #默认
+DEFAULT_DB_DBHOST = os.getenv('DEFAULT_DB_DBHOST', '192.168.88.2')
+DEFAULT_DB_DBPORT = os.getenv('DEFAULT_DB_DBPORT', '3306')
+DEFAULT_DB_DBUSER = os.getenv('DEFAULT_DB_DBUSER', 'root')
+DEFAULT_DB_DBPWD = os.getenv('DEFAULT_DB_DBPWD', 'm9uSFL7duAVXfeAwGUSG')
+DEFAULT_DB_DBNAME = os.getenv('DEFAULT_DB_DBNAME', 'codo_cmdb')
 
 #这是从库，读， 一般情况下是一个数据库即可，需要主从读写分离的，请自行建立好服务
-READONLY_DB_DBHOST = os.getenv('READONLY_DB_DBHOST', '172.16.0.223') #修改
-READONLY_DB_DBPORT = os.getenv('READONLY_DB_DBPORT', '3306') #修改
-READONLY_DB_DBUSER = os.getenv('READONLY_DB_DBUSER', 'root') #修改
-READONLY_DB_DBPWD = os.getenv('READONLY_DB_DBPWD', 'password') #修改
-READONLY_DB_DBNAME = os.getenv('READONLY_DB_DBNAME', 'codo_cmdb')  #默认
+READONLY_DB_DBHOST = os.getenv('READONLY_DB_DBHOST', '192.168.88.2')
+READONLY_DB_DBPORT = os.getenv('READONLY_DB_DBPORT', '3306')
+READONLY_DB_DBUSER = os.getenv('READONLY_DB_DBUSER', 'root')
+READONLY_DB_DBPWD = os.getenv('READONLY_DB_DBPWD', 'm9uSFL7duAVXfeAwGUSG')
+READONLY_DB_DBNAME = os.getenv('READONLY_DB_DBNAME', 'codo_cmdb')
 
 #这是Redis配置信息，默认情况下和codo-admin里面的配置一致
-DEFAULT_REDIS_HOST = os.getenv('DEFAULT_REDIS_HOST', '172.16.0.223') #修改
-DEFAULT_REDIS_PORT = os.getenv('DEFAULT_REDIS_PORT', '6379') #修改
+DEFAULT_REDIS_HOST = os.getenv('DEFAULT_REDIS_HOST', '192.168.88.2')
+DEFAULT_REDIS_PORT = os.getenv('DEFAULT_REDIS_PORT', '6379')
 DEFAULT_REDIS_DB = 8 #默认和codo-admin保持一致
 DEFAULT_REDIS_AUTH = True
 DEFAULT_REDIS_CHARSET = 'utf-8'
-DEFAULT_REDIS_PASSWORD = os.getenv('DEFAULT_REDIS_PASSWORD', 'cWCVKJ7ZHAK122VbivUf') #修改
+DEFAULT_REDIS_PASSWORD = os.getenv('DEFAULT_REDIS_PASSWORD', 'cWCVKJ7ZHUK12mVbivUf')
 
 
 
@@ -45,20 +45,20 @@ except:
 
 
 # Aws Events 事件邮件通知人
-AWS_EVENT_TO_EMAIL = '1111@qq.com,2222@gmail.com'
+AWS_EVENT_TO_EMAIL = 'xjdxx2008@hotmail.com'
 
 # SSH公钥,获取资产使用，一般都是机器默认路径,建议不要修改
 PUBLIC_KEY = '/root/.ssh/id_rsa.pub' #默认
 
 #Web Terminal 地址，请填写你部署的webterminal地址
-WEB_TERMINAL = 'http://1.1.1.1:8080'
+WEB_TERMINAL = 'http://192.168.88.41:64440'
 
 # 这里如果配置codo-task的数据库地址，则将数据同步到作业配置--TagTree下面(非必填项)
-CODO_TASK_DB_HOST = os.getenv('CODO_TASK_DB_HOST', '172.16.0.223')  #修改
-CODO_TASK_DB_PORT = os.getenv('CODO_TASK_DB_PORT', 3306) #修改
-CODO_TASK_DB_USER = os.getenv('CODO_TASK_DB_USER', 'root') #修改
-CODO_TASK_DB_PWD = os.getenv('CODO_TASK_DB_PWD', 'password') #修改
-CODO_TASK_DB_DBNAME = os.getenv('CODO_TASK_DB_DBNAME', 'do_task') #修改
+CODO_TASK_DB_HOST = os.getenv('CODO_TASK_DB_HOST', '192.168.88.2')
+CODO_TASK_DB_PORT = os.getenv('CODO_TASK_DB_PORT', '3306')
+CODO_TASK_DB_USER = os.getenv('CODO_TASK_DB_USER', 'root')
+CODO_TASK_DB_PWD = os.getenv('CODO_TASK_DB_PWD', 'm9uSFL7duAVXfeAwGUSG')
+CODO_TASK_DB_DBNAME = os.getenv('CODO_TASK_DB_DBNAME', 'codo_task')
 
 CODO_TASK_DB_INFO = dict(
     host=CODO_TASK_DB_HOST,
