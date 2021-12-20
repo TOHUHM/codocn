@@ -1,0 +1,9 @@
+$LOCALHOST_IP demo-init.opendevops.cn   ip address nodeport
+$LOCALHOST_IP mg.opendevops.cn    ip addr  
+$LOCALHOST_IP task.opendevops.cn   task   service
+$LOCALHOST_IP gw.opendevops.cn     gw service
+$LOCALHOST_IP cmdb2.opendevops.cn   cmdb2  service
+$LOCALHOST_IP kerrigan.opendevops.cn   kerrigan   service
+$LOCALHOST_IP tools.opendevops.cn     tools  service
+$LOCALHOST_IP cron.opendevops.cn      cron  service  
+$LOCALHOST_IP dns.opendevops.cn       coredns
