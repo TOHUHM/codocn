@@ -12,6 +12,11 @@ RUN yum update -y && yum install epel-release -y && yum update -y && yum install
 # 2. 准备python
 RUN wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tar.xz
 RUN xz -d Python-3.6.6.tar.xz && tar xvf Python-3.6.6.tar && cd Python-3.6.6 && ./configure && make && make install
+RUN pip3 install pysocks
+ENV http_proxy=socks5://192.168.1.6:1080
+ENV https_proxy=$http_proxy
+ENV no_proxy="localhost,192.168.0.0/16,10.0.0.0/8,127.0.0.1"
+
 
 # 3. 安装SDK依赖
 RUN pip3 install --upgrade pip
